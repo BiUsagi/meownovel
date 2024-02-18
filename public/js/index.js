@@ -186,3 +186,20 @@ function starRate(e){
           }
     });
 }
+
+
+
+function hienThiThoiGian() {
+    var thoiGian = new Date();
+
+    var gio = thoiGian.getHours();
+    var phut = thoiGian.getMinutes();
+    var giay = thoiGian.getSeconds();
+
+    var hienThiThoiGian = gio + ":" + phut + ":" + giay;
+
+    document.getElementById("tg").innerHTML = hienThiThoiGian;
+}
+
+// Gọi hàm để hiển thị thời gian mỗi giây
+setInterval(hienThiThoiGian, 1000);

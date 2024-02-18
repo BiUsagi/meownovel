@@ -1,0 +1,17 @@
+{
+    "name": "user/meownovel",
+    "autoload": {
+        "psr-4": {
+            "models\\": "models/",
+            "controllers\\": "controllers/",
+            "core\\": "models/core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "BiUsagi",
+            "email": "tubanovel@gmail.com"
+        }
+    ],
+    "require": {}
+}

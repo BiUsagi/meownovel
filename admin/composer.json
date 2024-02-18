@@ -1,0 +1,19 @@
+{
+    "name": "meownovel/admin",
+    "description": "Đây là trang Admin c?a web meownovel",
+    "autoload": {
+        "psr-4": {
+            "models\\": "models/",
+            "controllers\\": "controllers/",
+            "core\\": "models/core/"
+
+        }
+    },
+    "authors": [
+        {
+            "name": "BiUsagi",
+            "email": "tubanovel@gmail.com"
+        }
+    ],
+    "require": {}
+}
