@@ -6,7 +6,7 @@ class routes
     'sanpham' => ['index', 'page2', 'chitietsp'],
     'danhmuc' => ['index', 'themmoi', 'sua', 'create', 'edit', 'delete'],
     'taikhoan' => ['dangky', 'dangnhap', 'create', 'login', 'thongtin', 'sua', 'edit', 'doimk', 'resetpass', 'logout'],
-    'giohang' => ['index', 'themmoi', 'sua', 'create', 'edit', 'delete']
+    'giohang' => ['index', 'themmoi', 'edit', 'delete']
   ];
   public function checkRoute($controller, $action)
   {

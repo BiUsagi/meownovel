@@ -15,9 +15,9 @@
                 name="ghinho" style="margin-bottom:15px"> Nhớ Đăng Nhập -->
             <?php
             if (isset($thongBao)) { ?>
-                <p style="color: red; text-align: center;">
-                    <?= $thongBao; ?>
-                </p>
+            <p style="color: red; text-align: center;">
+                <?= $thongBao; ?>
+            </p>
             <?php } ?>
             <div class="clearfix">
                 <button type="submit" class="signupbtn">Đăng Nhập</button>
@@ -34,17 +34,17 @@
 <!-- End footer  -->
 
 <script>
-    function checkForm() {
-        var tentk = document.getElementById('tentk').value;
+function checkForm() {
+    var tentk = document.getElementById('tentk').value;
 
-        var ghinhoCheckbox = document.getElementsByName('ghinho')[0];
-        var isChecked = ghinhoCheckbox.checked;
+    var ghinhoCheckbox = document.getElementsByName('ghinho')[0];
+    var isChecked = ghinhoCheckbox.checked;
 
-        if (isChecked) {
-            document.cookie = "ghinho_tentk=" + tentk + "; expires=Thu, 01 Jan 2030 00:00:00 UTC; path=/;";
-        } else {
-            document.cookie = "ghinho_tentk=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        }
-        return true;
+    if (isChecked) {
+        document.cookie = "ghinho_tentk=" + tentk + "; expires=Thu, 01 Jan 2030 00:00:00 UTC; path=/;";
+    } else {
+        document.cookie = "ghinho_tentk=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     }
+    return true;
+}
 </script>

@@ -26,7 +26,7 @@ extract($user);
                 </div>
 
                 <div class="col-12">
-                    <p class="mg-top-sb"><a href="index.php?controller=taikhoan&action=chitiet"><i
+                    <p class="mg-top-sb"><a href="index.php?controller=taikhoan&action=thongtin"><i
                                 class="fa-solid fa-user"></i>
                             Thông tin tài khoản</a></p>
                     <p class="mg-top-sb"><a href="index.php?controller=taikhoan&action=sua"><i
@@ -99,12 +99,12 @@ extract($user);
 <?php require "views/layout/footer.php"; ?>
 
 <script>
-    function previewImage(event) {
-        var reader = new FileReader();
-        reader.onload = function () {
-            var output = document.getElementById('previewImg');
-            output.src = reader.result;
-        };
-        reader.readAsDataURL(event.target.files[0]);
-    }
+function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function() {
+        var output = document.getElementById('previewImg');
+        output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+}
 </script>

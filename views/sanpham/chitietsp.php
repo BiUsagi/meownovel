@@ -46,20 +46,26 @@ if (isset($_GET['id'])) {
                 <?= $sanpham->MoTa; ?>
             </div>
 
-            <div class="row">
+            <form method="post" action="index.php?controller=giohang&action=themmoi" class="row">
+                <input type="hidden" name="maSanPham" value="<?= $sanpham->MaSP; ?>">
                 <div id="soluong-sp" class="col-5">
                     <label for="soluongsp"></label>
                     <input type="button" value="-" id="trusl" onclick="tru()">
-                    <input type="text" name="soluongsp" id="soluongsp" value="1" min="1">
+                    <input type="text" name="soluongsp" id="soluongsp" value="1" min="1"
+                        max="<?= $sanpham->SoLuong; ?>">
                     <input type="button" value="+" id="congsl" onclick="cong()">
                 </div>
                 <div class="col-1"></div>
-                <div id="themgh" class="col-5" onclick="themspvaogio(this)">THÊM VÀO GIỎ
-                    HÀNG<i class="fa-solid fa-cart-arrow-down fa-xl"></i></div>
 
-            </div>
-
-
+                <button type="submit" name="themVaoGioHang" id="themgh" class="col-5">THÊM VÀO GIỎ
+                    HÀNG<i class="fa-solid fa-cart-arrow-down fa-xl"></i></button>
+            </form>
+            <?php
+            if (isset($thongBao)) { ?>
+                <p class="col-md-12 mt-3 text-center" style="color: red;">
+                    <?= $thongBao; ?>
+                </p>
+            <?php } ?>
 
         </div>
         <div class="col-1"></div>
@@ -70,3 +76,35 @@ if (isset($_GET['id'])) {
 <?php
 require "views/layout/footer.php";
 ?>
+
+<script>
+    let soluong = document.getElementById("soluongsp")
+    let soluongct = soluong.value
+    // let cong1 = document.getElementById("congsl")
+    // let tru2 = document.getElementById("trusl")
+
+    function render(soluongct) {
+        soluong.value = soluongct;
+    };
+
+    function tru() {
+        if (soluongct > 1) {
+            soluongct--
+            render(soluongct);
+        }
+    };
+
+    function cong() {
+        if (soluongct < <?= $sanpham->SoLuong; ?>)
+            soluongct++
+        render(soluongct);
+    };
+
+
+    soluong.addEventListener('input', function () {
+        soluongct = soluong.value;
+        soluongct = parseInt(soluongct);
+        soluongct = (isNaN(soluongct) || soluongct == 0) ? 1 : soluongct;
+        render(soluongct);
+    });
+</script>

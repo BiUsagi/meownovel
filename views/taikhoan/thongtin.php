@@ -29,7 +29,7 @@ if ($HinhAnh == Null) {
                 </div>
 
                 <div class="col-12">
-                    <p class="mg-top-sb"><a href="index.php?controller=taikhoan&action=chitiet" class="activetk"><i
+                    <p class="mg-top-sb"><a href="index.php?controller=taikhoan&action=thongtin" class="activetk"><i
                                 class="fa-solid fa-user redtk"></i>
                             Thông tin tài khoản</a></p>
                     <p class="mg-top-sb"><a href="index.php?controller=taikhoan&action=sua"><i

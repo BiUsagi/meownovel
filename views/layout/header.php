@@ -40,7 +40,7 @@ $hinhAnh = isset($user['HinhAnh']) ? $user['HinhAnh'] : '';
     <!-- Header -->
     <header>
         <div class="avahead">
-            <a href="./index.php<"><img src="/public/images/Logo/cat.jpg" alt></a>
+            <a href="./index.php"><img src="/public/images/Logo/cat.jpg" alt></a>
             <p class="logotiude">MEOW NOVEL</p>
         </div>
 
@@ -51,35 +51,35 @@ $hinhAnh = isset($user['HinhAnh']) ? $user['HinhAnh'] : '';
             <?php
             if (isset($_SESSION['user'])) {
                 ?>
-            <ul>
-                <?php if ($quanLy == 1) { ?>
-                <li><a href="admin/index.php?id=<?= $_SESSION['user']; ?>" style="margin-right: 10px;">
-                        ADMIN - </a></li>
+                <ul>
+                    <?php if ($quanLy == 1) { ?>
+                        <li><a href="admin/index.php?id=<?= $_SESSION['user']; ?>" style="margin-right: 10px;">
+                                ADMIN - </a></li>
 
-                <?php }
+                    <?php }
 
                     // Kiểm tra hình ảnh tài khoản
                     if ($hinhAnh == Null) { ?>
-                <img src="public/images/cat.jpg" alt="" style=" width: 30px; border-radius: 50%; object-fit: cover;">
-                <?php } else { ?>
-                <img src="<?= $hinhAnh ?>" alt=""
-                    style=" width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
-                <?php }
+                        <img src="public/images/cat.jpg" alt="" style=" width: 30px; border-radius: 50%; object-fit: cover;">
+                    <?php } else { ?>
+                        <img src="<?= $hinhAnh ?>" alt=""
+                            style=" width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                    <?php }
                     ?>
 
 
-                <li cass=" gach"><a href="index.php?controller=taikhoan&action=thongtin">
-                        <?= $_SESSION['user'] ?>
-                    </a>
-                </li>
-            </ul>
+                    <li cass=" gach"><a href="index.php?controller=taikhoan&action=thongtin">
+                            <?= $_SESSION['user'] ?>
+                        </a>
+                    </li>
+                </ul>
             <?php } else {
                 ?>
-            <ul>
-                <li><a href="index.php?controller=taikhoan&action=dangky"> ĐĂNG KÝ</a></li>
-                <li class="gach"><a href="index.php?controller=taikhoan&action=dangnhap"> ĐĂNG
-                        NHẬP</a></li>
-            </ul>
+                <ul>
+                    <li><a href="index.php?controller=taikhoan&action=dangky"> ĐĂNG KÝ</a></li>
+                    <li class="gach"><a href="index.php?controller=taikhoan&action=dangnhap"> ĐĂNG
+                            NHẬP</a></li>
+                </ul>
             <?php } ?>
         </div>
 

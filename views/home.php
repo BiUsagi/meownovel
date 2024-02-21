@@ -27,26 +27,26 @@ require "vendor/autoload.php";
         if ($i >= count($sanpham) - 8) {
             ?>
 
-    <div class="new-spm-home bg-cl" onmouseover="onboxshad(this)" onmouseout="outboxshad(this)">
-        <div class="thao-tacsp">
-            <i class="fa-regular fa-heart fa-lg"></i>
-            <i class="fa-solid fa-cart-arrow-down fa-lg" onclick="themvaogiohang(this)"></i>
-        </div>
-        <a href="index.php?controller=sanpham&action=chitietsp&id=<?= $sanpham[$i]->MaSP; ?>" class="img5"><img
-                src="admin/<?= $sanpham[$i]->HinhAnh; ?>" alt></a>
-        <p class="tieude"><a>
-                <?= $sanpham[$i]->TenSP; ?>
-            </a></p>
-        <div class="gia">
-            <?= number_format($sanpham[$i]->GiaTien, 0, ',', '.'); ?> đ
-        </div>
-        <div class="noidung-sp">
-            <?= $sanpham[$i]->MoTa; ?>
-        </div>
-        <input type="number" value="1" min="1" class="none1">
-    </div>
+            <div class="new-spm-home bg-cl" onmouseover="onboxshad(this)" onmouseout="outboxshad(this)">
+                <div class="thao-tacsp">
+                    <i class="fa-regular fa-heart fa-lg"></i>
+                    <i class="fa-solid fa-cart-arrow-down fa-lg" onclick="themvaogiohang(this)"></i>
+                </div>
+                <a href="index.php?controller=sanpham&action=chitietsp&id=<?= $sanpham[$i]->MaSP; ?>" class="img5"><img
+                        src="admin/<?= $sanpham[$i]->HinhAnh; ?>" alt></a>
+                <p class="tieude"><a href="index.php?controller=sanpham&action=chitietsp&id=<?= $sanpham[$i]->MaSP; ?>">
+                        <?= $sanpham[$i]->TenSP; ?>
+                    </a></p>
+                <div class="gia">
+                    <?= number_format($sanpham[$i]->GiaTien, 0, ',', '.'); ?> đ
+                </div>
+                <div class="noidung-sp">
+                    <?= $sanpham[$i]->MoTa; ?>
+                </div>
+                <input type="number" value="1" min="1" class="none1">
+            </div>
 
-    <?php }
+        <?php }
     } ?>
 </div>
 <input type="button" value="XEM THÊM" class="xtbt"
@@ -122,26 +122,26 @@ require "vendor/autoload.php";
         if ($i >= 8 && $i < 16) {
             ?>
 
-    <div class="new-spm-home bg-cl" onmouseover="onboxshad(this)" onmouseout="outboxshad(this)">
-        <div class="thao-tacsp">
-            <i class="fa-regular fa-heart fa-lg"></i>
-            <i class="fa-solid fa-cart-arrow-down fa-lg" onclick="themvaogiohang(this)"></i>
-        </div>
-        <a href="index.php?controller=sanpham&action=chitietsp&id=<?= $sanpham[$i]->MaSP; ?>" class="img5"><img
-                src="admin/<?= $sanpham[$i]->HinhAnh; ?>" alt></a>
-        <p class="tieude"><a>
-                <?= $sanpham[$i]->TenSP; ?>
-            </a></p>
-        <div class="gia">
-            <?= number_format($sanpham[$i]->GiaTien, 0, ',', '.'); ?> đ
-        </div>
-        <div class="noidung-sp">
-            <?= $sanpham[$i]->MoTa; ?>
-        </div>
-        <input type="number" value="1" min="1" class="none1">
-    </div>
+            <div class="new-spm-home bg-cl" onmouseover="onboxshad(this)" onmouseout="outboxshad(this)">
+                <div class="thao-tacsp">
+                    <i class="fa-regular fa-heart fa-lg"></i>
+                    <i class="fa-solid fa-cart-arrow-down fa-lg" onclick="themvaogiohang(this)"></i>
+                </div>
+                <a href="index.php?controller=sanpham&action=chitietsp&id=<?= $sanpham[$i]->MaSP; ?>" class="img5"><img
+                        src="admin/<?= $sanpham[$i]->HinhAnh; ?>" alt></a>
+                <p class="tieude"><a href="index.php?controller=sanpham&action=chitietsp&id=<?= $sanpham[$i]->MaSP; ?>">
+                        <?= $sanpham[$i]->TenSP; ?>
+                    </a></p>
+                <div class="gia">
+                    <?= number_format($sanpham[$i]->GiaTien, 0, ',', '.'); ?> đ
+                </div>
+                <div class="noidung-sp">
+                    <?= $sanpham[$i]->MoTa; ?>
+                </div>
+                <input type="number" value="1" min="1" class="none1">
+            </div>
 
-    <?php }
+        <?php }
     } ?>
 </div>
 <input type="button" value="XEM THÊM" class="xtbt"
