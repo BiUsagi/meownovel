@@ -4,6 +4,7 @@ require "vendor/autoload.php";
 
 use models\SanPham;
 use models\GioHang;
+use models\TaiKhoan;
 
 class giohangController extends BaseController
 {
@@ -97,6 +98,43 @@ class giohangController extends BaseController
         } else {
             echo json_encode(['status' => 'error']);
         }
+    }
+
+    public function thanhtoan()
+    {
+        $this->render('thanhtoan');
+    }
+    public function thucthithanhtoan()
+    {
+        // Kiểm tra xem người dùng đã ấn nút thanh toán hay chưa
+        if (isset($_POST['thanhtoan'])) {
+
+            $TenKH = $_SESSION['user'];
+            $giohang = GioHang::LayGioHangTheoKH($TenKH);
+            $hoten = $_POST['hoten'];
+            $sodienthoai = $_POST['sodienthoai'];
+            $diachi = $_POST['diachi'];
+            $tongtien = $_POST['tongtien'];
+
+            //Lưu thông tin đơn hàng vào bảng 'donhang'
+            $id_donhang = GioHang::LuuDonHang($TenKH, $hoten, $sodienthoai, $diachi, $tongtien);
+
+            // Lưu chi tiết đơn hàng vào bảng 'chitietdonhang' cho từng sản phẩm trong giỏ hàng
+            for ($i = 0; $i < count($giohang); $i++) {
+                $masanpham = $giohang[$i]['MaSP'];
+                $soluong = $giohang[$i]['SoLuong'];
+                $dongia = SanPham::GetById($masanpham)->GiaTien;
+
+                GioHang::LuuChiTietDonHang($id_donhang, $masanpham, $soluong, $dongia);
+            }
+
+            //Xóa dữ liệu trong bảng 'giohang' sau khi đã đặt hàng thành công
+            GioHang::XoaGioHang($_SESSION['user']);
+
+            header("Location: index.php?controller=taikhoan&action=lichsumuahang");
+            exit();
+        }
+
     }
 
     public function error()

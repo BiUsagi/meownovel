@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('controllers/baseController.php');
 require 'vendor/autoload.php';
 

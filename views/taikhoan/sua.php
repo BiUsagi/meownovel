@@ -40,8 +40,9 @@ if ($HinhAnh == Null) {
                                 class="fa-solid fa-lock "></i>
                             Thay đổi mật khẩu</a>
                     </p>
-                    <p class="mg-top-sb"><a href="index.php?tkh=congthucdamua"><i
-                                class="fa-solid fa-clock-rotate-left "></i> Lịch sử đơn hàng </a></p>
+                    <p class="mg-top-sb"><a href="index.php?controller=taikhoan&action=lichsumuahang"><i
+                                class="fa-solid fa-clock-rotate-left "></i>
+                            Lịch sử mua hàng </a></p>
 
                     <p class="mg-top-sb"><a href="index.php?controller=taikhoan&action=logout"><i
                                 class="fa-solid fa-right-from-bracket "></i> Đăng xuất</a></p>
@@ -118,12 +119,12 @@ if ($HinhAnh == Null) {
 <?php require "views/layout/footer.php"; ?>
 
 <script>
-function previewImage(event) {
-    var reader = new FileReader();
-    reader.onload = function() {
-        var output = document.getElementById('previewImg');
-        output.src = reader.result;
-    };
-    reader.readAsDataURL(event.target.files[0]);
-}
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function () {
+            var output = document.getElementById('previewImg');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
 </script>

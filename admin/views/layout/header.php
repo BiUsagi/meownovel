@@ -74,13 +74,12 @@ if (isset($_SESSION['user'])) {
         <ul class="app-menu">
             <li><a class="app-menu__item haha" href="../index.php"><i class='app-menu__icon bx bx-cart-alt'></i>
                     <span class="app-menu__label">Trang WEB</span></a></li>
-            <!-- <li><a class="app-menu__item " href="index.php"><i class='app-menu__icon bx bx-tachometer'></i><span
-                        class="app-menu__label">Bảng điều khiển</span></a></li> -->
+            <li><a class="app-menu__item " href="index.php"><i class='app-menu__icon bx bx-tachometer'></i><span
+                        class="app-menu__label">Bảng điều khiển</span></a></li>
             <li><a class="app-menu__item" href="index.php?controller=taikhoan&action=index"><i
                         class='app-menu__icon bx bx-user-voice'></i><span class="app-menu__label">Quản lý khách
                         hàng</span></a></li>
-            <li><a class="app-menu__item"
-                    href="index.php?controller=danhmuc&action=index&id=<?= $_SESSION['user']; ?>"><i
+            <li><a class="app-menu__item" href="index.php?controller=danhmuc&action=index"><i
                         class='app-menu__icon bx bx-task'></i><span class="app-menu__label">Quản lý danh mục</span></a>
             </li>
             <li><a class="app-menu__item" href="index.php?controller=sanpham&action=index"><i

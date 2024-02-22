@@ -38,6 +38,15 @@ class taikhoanController extends BaseController
         $this->render('doimk');
     }
 
+    public function lichsumuahang()
+    {
+        $this->render('lichsumuahang');
+    }
+    public function chitietdonhang()
+    {
+        $this->render('chitietdonhang');
+    }
+
     public function edit()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -159,7 +168,7 @@ class taikhoanController extends BaseController
 
             if ($matKhauMoi != $nhapLaiMatKhau) {
                 $thongBao = "Xác nhận mật khẩu không khớp!";
-            }else if($matKhauMoi == $matKhauCu){
+            } else if ($matKhauMoi == $matKhauCu) {
                 $thongBao = "Mật khẩu cũ không được trùng mới mật khẩu mới!";
             } else {
                 $result = TaiKhoan::DoiMatKhau($MaKH, $matKhauCu, $matKhauMoi);

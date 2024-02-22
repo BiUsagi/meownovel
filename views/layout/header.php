@@ -1,5 +1,7 @@
 <?php
 require "vendor/autoload.php";
+
+use models\GioHang;
 use models\TaiKhoan;
 
 // Lấy thông tin tài khoản theo tên
@@ -85,7 +87,20 @@ $hinhAnh = isset($user['HinhAnh']) ? $user['HinhAnh'] : '';
 
         <div class="stohead">
             <a id="giohang-head" onclick="show()"><img src="/public/images/Logo/cart-icon.webp" alt></a>
-            <div id="slsanpham">0</div>
+            <div id="slsanphamheader">
+                <?php
+                $slgh = 0;
+                if (isset($_SESSION['user'])) {
+                    $soluongGH = GioHang::LayGioHangTheoKH($_SESSION['user']);
+                    for ($i = 0; $i < count($soluongGH); $i++) {
+                        $slgh = $slgh + $soluongGH[$i]['SoLuong'];
+                    }
+                    echo $slgh;
+                } else {
+                    echo 0;
+                }
+                ?>
+            </div>
         </div>
 
     </header>

@@ -40,8 +40,9 @@ if ($HinhAnh == Null) {
                                 class="fa-solid fa-lock "></i>
                             Thay đổi mật khẩu</a>
                     </p>
-                    <p class="mg-top-sb"><a href="index.php?tkh=congthucdamua"><i
-                                class="fa-solid fa-clock-rotate-left "></i> Lịch sử đơn hàng </a></p>
+                    <p class="mg-top-sb"><a href="index.php?controller=taikhoan&action=lichsumuahang"><i
+                                class="fa-solid fa-clock-rotate-left "></i>
+                            Lịch sử mua hàng </a></p>
 
                     <p class="mg-top-sb"><a href="index.php?controller=taikhoan&action=logout"><i
                                 class="fa-solid fa-right-from-bracket "></i> Đăng xuất</a></p>

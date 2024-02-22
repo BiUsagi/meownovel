@@ -1,6 +1,10 @@
 <?php
 require "views/layout/header.php";
 
+use models\TaiKhoan;
+use models\SanPham;
+use models\GioHang;
+
 ?>
 <main class="app-content">
     <div class="row">
@@ -23,7 +27,12 @@ require "views/layout/header.php";
                     <div class="widget-small primary coloured-icon"><i class='icon bx bxs-user-account fa-3x'></i>
                         <div class="info">
                             <h4>Tổng khách hàng</h4>
-                            <p><b>56 khách hàng</b></p>
+                            <?php
+                            $khachhang = TaiKhoan::TatCaTaiKhoan();
+                            ?>
+                            <p><b>
+                                    <?= count($khachhang); ?> khách hàng
+                                </b></p>
                             <p class="info-tong">Tổng số khách hàng được quản lý.</p>
                         </div>
                     </div>
@@ -33,7 +42,12 @@ require "views/layout/header.php";
                     <div class="widget-small info coloured-icon"><i class='icon bx bxs-data fa-3x'></i>
                         <div class="info">
                             <h4>Tổng sản phẩm</h4>
-                            <p><b>1850 sản phẩm</b></p>
+                            <?php
+                            $allsanpham = SanPham::TatCaSanPham();
+                            ?>
+                            <p><b>
+                                    <?= count($allsanpham); ?> sản phẩm
+                                </b></p>
                             <p class="info-tong">Tổng số sản phẩm được quản lý.</p>
                         </div>
                     </div>
@@ -43,7 +57,12 @@ require "views/layout/header.php";
                     <div class="widget-small warning coloured-icon"><i class='icon bx bxs-shopping-bags fa-3x'></i>
                         <div class="info">
                             <h4>Tổng đơn hàng</h4>
-                            <p><b>247 đơn hàng</b></p>
+                            <?php
+                            $alldonhang = GioHang::TatCaDonHang();
+                            ?>
+                            <p><b>
+                                    <?= count($alldonhang); ?> đơn hàng
+                                </b></p>
                             <p class="info-tong">Tổng số hóa đơn bán hàng trong tháng.</p>
                         </div>
                     </div>
@@ -52,10 +71,19 @@ require "views/layout/header.php";
                 <div class="col-md-6">
                     <div class="widget-small danger coloured-icon"><i class='icon bx bxs-error-alt fa-3x'></i>
                         <div class="info">
-                            <h4>Sắp hết hàng</h4>
-                            <p><b>4 sản phẩm</b></p>
-                            <p class="info-tong">Số sản phẩm cảnh báo hết cần nhập
-                                thêm.</p>
+                            <h4>Sắp hết hàng ( < 3 ) </h4>
+                                    <?php
+                                    $sphethang = 0;
+                                    for ($i = 0; $i < count($allsanpham); $i++) {
+                                        if ($allsanpham[$i]->SoLuong <= 3) {
+                                            $sphethang++;
+                                        }
+                                    } ?>
+                                    <p><b>
+                                            <?= $sphethang; ?> sản phẩm
+                                        </b></p>
+                                    <p class="info-tong">Số sản phẩm cảnh báo hết cần nhập
+                                        thêm.</p>
                         </div>
                     </div>
                 </div>

@@ -58,14 +58,15 @@ if (!isset($giohang)) {
         $TongTien = $TongTien + ($sanpham->GiaTien * $giohang[$i]['SoLuong']);
     }
     ?>
-    <div class="gh-tong row">
+    <form action="index.php?controller=giohang&action=thanhtoan" class="gh-tong row" method="post">
         <div class="col-6"></div>
         <h4 class="col-2">Tổng cộng</h4>
         <div class="tong-tien col-2">
             <?= number_format($TongTien, 0, ',', '.'); ?> ₫
         </div>
-        <button class="gh-thanhtoan col-2">THANH TOÁN</button>
-    </div>
+        <input type="hidden" name="tongtien" value="<?= $TongTien; ?>">
+        <button type="submit" name="thanhtoan" class="gh-thanhtoan col-2">THANH TOÁN</button>
+    </form>
 
 </div>
 
