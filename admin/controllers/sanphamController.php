@@ -32,6 +32,12 @@ class sanphamController extends BaseController
             $moTa = $_POST['moTa'];
             $maDanhMuc = $_POST['danhMuc'];
 
+            if ($tenSanPham == null || $soLuong == null || $giaBan == null || $NhaXB == null || $moTa == null) {
+                $thongBao = "Vui lòng điền đầy đủ thông tin sản phẩm!";
+                require "views/sanpham/themmoi.php";
+                exit();
+            }
+
             $hinhAnhPath = '';
 
             if (isset($_FILES['anhSanPham']) && $_FILES['anhSanPham']['error'] == UPLOAD_ERR_OK) {

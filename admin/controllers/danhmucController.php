@@ -26,6 +26,12 @@ class danhmucController extends BaseController
   {
     if (isset($_POST['submit'])) {
       $TenDM = $_POST['tenDanhMuc'];
+
+      if ($TenDM == null) {
+        $thongBao = "Vui lòng điền tên danh mục";
+        require "views/danhmuc/themmoi.php";
+        exit();
+      }
       $NgayTao = date('Y-m-d H:i:s');
 
       if (DanhMuc::Create($TenDM, $NgayTao) > 0) {
