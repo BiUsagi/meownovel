@@ -48,6 +48,43 @@ class SanPham
         $conn->close();
         return $sanPhamArray;
     }
+    public static function SanPhamTheoDanhMuc($iddm)
+    {
+        $conn = new Connect();
+
+        $sql = "SELECT * FROM sanpham WHERE MaDM = $iddm";
+        $result = $conn->query($sql);
+
+        $sanPhamArray = array();
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $sanPhamArray[] = new SanPham($row['MaSP'], $row['TenSP'], $row['SoLuong'], $row['GiaTien'], $row['MoTa'], $row['NhaXB'], $row['NgayTao'], $row['HinhAnh'], $row['MaDM']);
+            }
+        }
+
+        $conn->close();
+        return $sanPhamArray;
+    }
+
+    public static function SanPhamTheoNXB($nxb)
+    {
+        $conn = new Connect();
+
+        $sql = "SELECT * FROM sanpham WHERE NhaXB = '$nxb'";
+        $result = $conn->query($sql);
+
+        $sanPhamArray = array();
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $sanPhamArray[] = new SanPham($row['MaSP'], $row['TenSP'], $row['SoLuong'], $row['GiaTien'], $row['MoTa'], $row['NhaXB'], $row['NgayTao'], $row['HinhAnh'], $row['MaDM']);
+            }
+        }
+
+        $conn->close();
+        return $sanPhamArray;
+    }
     public static function Create($tenSanPham, $soLuong, $giaBan, $moTa, $nxb, $hinhAnhPath, $maDanhMuc)
     {
         $conn = new Connect();

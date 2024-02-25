@@ -22,6 +22,18 @@ class sanphamController extends BaseController
         $data = ['sanpham' => SanPham::TatCaSanPham()];
         $this->render('page2', $data);
     }
+    public function sptheodm()
+    {
+        $iddm = $_GET['iddm'];
+        $data = ['sanpham' => SanPham::SanPhamTheoDanhMuc($iddm)];
+        $this->render('sptheodm', $data);
+    }
+    public function sptheonxb()
+    {
+        $nxb = $_GET['nxb'];
+        $data = ['sanpham' => SanPham::SanPhamTheoNXB($nxb)];
+        $this->render('sptheonxb', $data);
+    }
     public function chitietsp()
     {
         $this->render('chitietsp');

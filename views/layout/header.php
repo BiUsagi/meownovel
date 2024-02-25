@@ -127,43 +127,53 @@ $hinhAnh = isset($user['HinhAnh']) ? $user['HinhAnh'] : '';
         <div class="top-new">
             <p>Các Nhà Xuất Bản, Nhà Phát Hành Nổi Bật</p>
             <div class="pic" onmouseover="noilen(this)" onmouseout="haxuong(this)">
-                <a href><img src="/public/images/Logo/ipm.png" alt></a>
+                <a href="index.php?controller=sanpham&action=sptheonxb&nxb=IPM"><img src="/public/images/Logo/ipm.png"
+                        alt></a>
                 <p>IMP</p>
             </div>
             <div class="pic" onmouseover="noilen(this)" onmouseout="haxuong(this)">
-                <a href><img src="/public/images/Logo/Logo_nxb_Kim_Đồng.png" alt></a>
+                <a href="index.php?controller=sanpham&action=sptheonxb&nxb=Kim%20Đồng"><img
+                        src="/public/images/Logo/Logo_nxb_Kim_Đồng.png" alt></a>
                 <p>Kim Đồng</p>
             </div>
             <div class="pic" onmouseover="noilen(this)" onmouseout="haxuong(this)">
-                <a href><img src="/public/images/Logo/hikari.jpg" alt></a>
+                <a href="index.php?controller=sanpham&action=sptheonxb&nxb=Hikari"><img
+                        src="/public/images/Logo/hikari.jpg" alt></a>
                 <p>Hikari</p>
             </div>
             <div class="pic" onmouseover="noilen(this)" onmouseout="haxuong(this)">
-                <a href><img src="/public/images/Logo/sakura.jfif" alt></a>
+                <a href="index.php?controller=sanpham&action=sptheonxb&nxb=Sakura%20Books"><img
+                        src="/public/images/Logo/sakura.jfif" alt></a>
                 <p>Sakura Books</p>
             </div>
             <div class="pic" onmouseover="noilen(this)" onmouseout="haxuong(this)">
-                <a href><img src="/public/images/Logo/skybook.jpg" alt></a>
+                <a href="index.php?controller=sanpham&action=sptheonxb&nxb=Sky%20Books"><img
+                        src="/public/images/Logo/skybook.jpg" alt></a>
                 <p>Sky Books</p>
             </div>
             <div class="pic" onmouseover="noilen(this)" onmouseout="haxuong(this)">
-                <a href><img src="/public/images/Logo/tre.png" alt></a>
+                <a href="index.php?controller=sanpham&action=sptheonxb&nxb=Nxb%20Trẻ"><img
+                        src="/public/images/Logo/tre.png" alt></a>
                 <p>Nxb Trẻ</p>
             </div>
             <div class="pic" onmouseover="noilen(this)" onmouseout="haxuong(this)">
-                <a href><img src="/public/images/Logo/tsuki.png" alt></a>
+                <a href="index.php?controller=sanpham&action=sptheonxb&nxb=Tsuki"><img
+                        src="/public/images/Logo/tsuki.png" alt></a>
                 <p>Tsuki</p>
             </div>
             <div class="pic" onmouseover="noilen(this)" onmouseout="haxuong(this)">
-                <a href><img src="/public/images/Logo/amak.png" alt></a>
+                <a href="index.php?controller=sanpham&action=sptheonxb&nxb=Amak%20Books"><img
+                        src="/public/images/Logo/amak.png" alt></a>
                 <p>Amak Books</p>
             </div>
             <div class="pic" onmouseover="noilen(this)" onmouseout="haxuong(this)">
-                <a href><img src="/public/images/Logo/thaiha.jpg" alt></a>
+                <a href="index.php?controller=sanpham&action=sptheonxb&nxb=Thái%20Hà"><img
+                        src="/public/images/Logo/thaiha.jpg" alt></a>
                 <p>Thái Hà</p>
             </div>
             <div class="pic" onmouseover="noilen(this)" onmouseout="haxuong(this)">
-                <a href><img src="/public/images/Logo/nhânm.png" alt></a>
+                <a href="index.php?controller=sanpham&action=sptheonxb&nxb=Nhã%20Nam"><img
+                        src="/public/images/Logo/nhânm.png" alt></a>
                 <p>Nhã Nam</p>
             </div>
         </div>

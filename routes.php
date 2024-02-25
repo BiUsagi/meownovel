@@ -3,7 +3,7 @@ class routes
 {
   private $controllers = [
     'home' => ['home', 'index', 'lienhe', 'gioithieu'],
-    'sanpham' => ['index', 'page2', 'chitietsp'],
+    'sanpham' => ['index', 'page2', 'chitietsp', 'sptheodm', 'sptheonxb'],
     'danhmuc' => ['index', 'themmoi', 'sua', 'create', 'edit', 'delete'],
     'taikhoan' => ['dangky', 'dangnhap', 'create', 'login', 'thongtin', 'sua', 'edit', 'doimk', 'resetpass', 'logout', 'lichsumuahang', 'chitietdonhang'],
     'giohang' => ['index', 'themmoi', 'edit', 'delete', 'thanhtoan', 'thucthithanhtoan']
