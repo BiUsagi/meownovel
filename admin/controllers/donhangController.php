@@ -1,5 +1,8 @@
 <?php
 require_once('controllers/baseController.php');
+require "vendor/autoload.php";
+
+use models\GioHang;
 
 class donhangController extends BaseController
 {
@@ -10,8 +13,14 @@ class donhangController extends BaseController
 
     public function index()
     {
-        $this->render('index');
+        $data = ['donhang' => GioHang::TatCaDonHangR()];
+        $this->render('index', $data);
     }
+    public function chitietdonhang()
+    {
+        $this->render('chitietdonhang');
+    }
+
     public function error()
     {
         $this->render('error');

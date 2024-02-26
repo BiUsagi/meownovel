@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once('controllers/baseController.php');
 
 class homeController extends BaseController

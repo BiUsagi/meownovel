@@ -69,6 +69,19 @@ class GioHang
         return $donhangList;
     }
 
+    public static function TatCaDonHangR()
+    {
+        $conn = new Connect();
+
+        $sql = "SELECT * FROM donhang";
+
+        $result = $conn->query($sql);
+
+        $conn->close();
+
+        return $result;
+    }
+
     public static function LayGioHangTheoKH($TenKH)
     {
         $conn = new Connect();

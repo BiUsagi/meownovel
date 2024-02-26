@@ -86,9 +86,9 @@ if (isset($_SESSION['user'])) {
                         class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý sản
                         phẩm</span></a>
             </li>
-            <!-- <li><a class="app-menu__item" href="index.php?controller=donhang&action=index"><i
+            <li><a class="app-menu__item" href="index.php?controller=donhang&action=index"><i
                         class='app-menu__icon bx bx-task'></i><span class="app-menu__label">Quản lý đơn hàng</span></a>
-            </li> -->
+            </li>
             <!-- <li><a class="app-menu__item" href="quan-ly-bao-cao.php"><i
                         class='app-menu__icon bx bx-pie-chart-alt-2'></i><span class="app-menu__label">Báo cáo doanh
                         thu</span></a>

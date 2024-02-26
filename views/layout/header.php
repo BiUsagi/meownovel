@@ -53,40 +53,42 @@ $hinhAnh = isset($user['HinhAnh']) ? $user['HinhAnh'] : '';
             <?php
             if (isset($_SESSION['user'])) {
                 ?>
-                <ul>
-                    <?php if ($quanLy == 1) { ?>
-                        <li><a href="admin/index.php?id=<?= $_SESSION['user']; ?>" style="margin-right: 10px;">
-                                ADMIN - </a></li>
+            <ul>
+                <?php if ($quanLy == 1) { ?>
+                <li><a href="admin/index.php?id=<?= $_SESSION['user']; ?>" style="margin-right: 10px;">
+                        ADMIN - </a></li>
 
-                    <?php }
+                <?php }
 
                     // Kiểm tra hình ảnh tài khoản
                     if ($hinhAnh == Null) { ?>
-                        <img src="public/images/cat.jpg" alt="" style=" width: 30px; border-radius: 50%; object-fit: cover;">
-                    <?php } else { ?>
-                        <img src="<?= $hinhAnh ?>" alt=""
-                            style=" width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
-                    <?php }
+                <img src="public/images/cat.jpg" alt="" style=" width: 30px; border-radius: 50%; object-fit: cover;">
+                <?php } else { ?>
+                <img src="<?= $hinhAnh ?>" alt=""
+                    style=" width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
+                <?php }
                     ?>
 
 
-                    <li cass=" gach"><a href="index.php?controller=taikhoan&action=thongtin">
-                            <?= $_SESSION['user'] ?>
-                        </a>
-                    </li>
-                </ul>
+                <li cass=" gach"><a href="index.php?controller=taikhoan&action=thongtin">
+                        <?= $_SESSION['user'] ?>
+                    </a>
+                </li>
+            </ul>
             <?php } else {
                 ?>
-                <ul>
-                    <li><a href="index.php?controller=taikhoan&action=dangky"> ĐĂNG KÝ</a></li>
-                    <li class="gach"><a href="index.php?controller=taikhoan&action=dangnhap"> ĐĂNG
-                            NHẬP</a></li>
-                </ul>
+            <ul>
+                <li><a href="index.php?controller=taikhoan&action=dangky"> ĐĂNG KÝ</a></li>
+                <li class="gach"><a href="index.php?controller=taikhoan&action=dangnhap"> ĐĂNG
+                        NHẬP</a></li>
+            </ul>
             <?php } ?>
         </div>
 
         <div class="stohead">
-            <a id="giohang-head" onclick="show()"><img src="/public/images/Logo/cart-icon.webp" alt></a>
+            <!-- <a id="giohang-head" onclick="show()"><img src="/public/images/Logo/cart-icon.webp" alt></a> -->
+            <a href="index.php?controller=giohang&action=index" id="giohang-head"><img
+                    src=" /public/images/Logo/cart-icon.webp" alt></a>
             <div id="slsanphamheader">
                 <?php
                 $slgh = 0;
@@ -190,7 +192,7 @@ $hinhAnh = isset($user['HinhAnh']) ? $user['HinhAnh'] : '';
             <div id="tong-tien">0₫</div>
         </div>
         <div id="sto-thaotac">
-            <a href="/app/views/giohang.php"><button id="thaotac-01">XEM
+            <a href="index.php?controller=giohang&action=index"><button id="thaotac-01">XEM
                     GIỎ HÀNG</button></a>
             <button id="thaotac-02">THANH TOÁN</button>
         </div>
